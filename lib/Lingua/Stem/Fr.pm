@@ -1,6 +1,5 @@
 package Lingua::Stem::Fr;
 
-use 5.008003;
 use strict;
 use warnings;
 
@@ -19,7 +18,7 @@ our %EXPORT_TAGS = ();
 our @EXPORT_OK = qw (stem stem_word clear_stem_cache stem_caching);
 our @EXPORT = ();
 
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 
 my $Stem_Caching  = 0;
@@ -548,7 +547,9 @@ This french version is based too, on the work of Aldo Calpini (Italian Version)
 
 =over 4
 
-=item stem({ -words => \@words, -locale => 'fr', -exceptions => \%exceptions });                                                                                
+=item
+
+stem({ -words => \@words, -locale => 'fr', -exceptions => \%exceptions });                                                                                
 Stems a list of passed words. Returns an anonymous list reference to the stemmed
 words.
 
@@ -600,9 +601,11 @@ Original version; created by h2xs 1.23 with options
 	-n
 	Lingua::Stem::Fr
 
+=item 0.02
+
+Minor change in documentation and disable of limitation to perl 5.8.3+
+
 =back
-
-
 
 =head1 SEE ALSO
 
